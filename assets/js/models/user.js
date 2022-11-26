@@ -1,17 +1,33 @@
 class User {
 
-  constructor(name, lastName, age) {
+  constructor(name, lastName, age, email) {
     this.name = name.trim();
     this.lastName = lastName.trim();
     this.age = age;
-    this.email = `${this.name}.${this.lastName.toLowerCase().split(' ').join('.')}@ironhack.com`;
+
+    if (email) {
+      this.email = email;
+    } else {
+      this.email = `${this.name}.${this.lastName.toLowerCase().split(' ').join('.')}@ironhack.com`;
+    }
   }
 
   getFullName() {
     return `${this.name} ${this.lastName}`;
   }
 
+  greet() {
+    return `Hi! I'm ${this.name} ${this.lastName}`;
+  }
+
+
+  speak(text) {
+    return `${this.greet()}: ${text}`
+  }
+
 }
+
+
 
 // const user = new User('Carlos ', 'del Prado', 32);
 // this = {} 3

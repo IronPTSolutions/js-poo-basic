@@ -5,4 +5,12 @@ class Student extends User {
     this.grades = grades;
   }
 
+  greet() {
+    return `${super.greet()} and I'm a Student`;
+  }
+
+  speak(text) {
+    return `${super.speak(text)}. Chimpún!`
+  }
+
 }

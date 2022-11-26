@@ -8,3 +8,10 @@ console.log(user.getFullName());
 
 console.log(student);
 console.log(student.getFullName());
+
+const users = [user, student];
+const text = 'Bla bla bla'
+for (let user of users) {
+  //console.log(user.greet());
+  console.log(user.speak(text));
+}
